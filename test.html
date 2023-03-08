@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ma vitrine avec des onglets déroulants</title>
+	<style>
+		/* style pour les onglets */
+		.tab {
+			overflow: hidden;
+			border: 1px solid #ccc;
+			background-color: #f1f1f1;
+		}
+		.tab button {
+			background-color: inherit;
+			float: left;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			padding: 14px 16px;
+			transition: 0.3s;
+			font-size: 17px;
+		}
+		.tab button:hover {
+			background-color: #ddd;
+		}
+		.tab button.active {
+			background-color: #ccc;
+		}
+
+		/* style pour le contenu des onglets */
+		.tabcontent {
+			display: none;
+			padding: 6px 12px;
+			border: 1px solid #ccc;
+			border-top: none;
+		}
+	</style>
+</head>
+<body>
+	<!-- onglets -->
+	<div class="tab">
+		<button class="tablinks" onclick="openTab(event, 'produits')">Produits</button>
+		<button class="tablinks" onclick="openTab(event, 'services')">Services</button>
+	</div>
+
+	<!-- contenu des onglets -->
+	<div id="produits" class="tabcontent">
+		<h3>Produits</h3>
+		<p>Voici la liste de nos produits :</p>
+		<ul>
+			<li>Produit 1</li>
+			<li>Produit 2</li>
+			<li>Produit 3</li>
+		</ul>
+	</div>
+
+	<div id="services" class="tabcontent">
+		<h3>Services</h3>
+		<p>Voici la liste de nos services :</p>
+		<ul>
+			<li>Service 1</li>
+			<li>Service 2</li>
+			<li>Service 3</li>
+		</ul>
+	</div>
+
+	<!-- script pour ouvrir le bon onglet -->
+	<script>		
+		function openTab(evt, tabName) {
+			// variables
+			var i, tabcontent, tablinks;
+
+			// cacher tous les contenus des onglets
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+
+			// retirer la classe active de tous les boutons d'onglets
+			tablinks = document.getElementsByClassName("tablinks");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+			}
+
+			// afficher le contenu de l'onglet sélectionné et ajouter la classe active au bouton d'onglet
+			document.getElementById(tabName).style.display = "block";
+			evt.currentTarget.className += " active";
+		}
+	</script>
+</body>
+</html>
