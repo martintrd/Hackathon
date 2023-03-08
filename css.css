@@ -1,0 +1,17 @@
+/* Style pour les commentaires */
+.comment {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  
+  .comment strong {
+    font-weight: bold;
+  }
+  
+  .comment p {
+    margin: 0;
+  }
+  
