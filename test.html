@@ -82,6 +82,133 @@
 				});
 				$(document).ready(function(){
 					let bouton=0
+					$("#left_arrow").click(function(){
+						$("#img1").css({
+							"width" : "700px",
+							"height" : "400px",
+							"left" : "calc(50% - 350px)",
+							"opacity" : "1",
+							"z-index" : "2"
+						});
+						$("#img2").css({
+							"width" : "500px",
+							"height" : "300px",
+							"margin-left" : "57.5%",
+							"opacity" : "0.25",
+							"z-index" : "1"
+						});
+						$("#img3").css({
+							"width" : "500px",
+							"height" : "300px",
+							"right" : "-15%",
+							"opacity" : "0"
+						});
+						$("#right_arrow").css({
+							"z-index" : "3"
+						});
+						$("#right_arrow2").css({
+							"z-index" : "4"
+						});
+					});
+					$("#left_arrow2").click(function(){
+						$("#img1").css({
+							"width" : "500px",
+							"height" : "300px",
+							"left" : "7.5%",
+							"opacity" : "0.25",
+							"z-index" : "1"
+						});
+						$("#img2").css({
+							"width" : "700px",
+							"height" : "400px",
+							"margin-left" : "0",
+							"opacity" : "1",
+							"z-index" : "2"
+						});
+						$("#img3").css({
+							"width" : "500px",
+							"height" : "300px",
+							"right" : "7.5%",
+							"opacity" : "0.25",
+							"z-index" : "1"
+						});
+						$("#left_arrow").css({
+							"z-index" : "4"
+						});
+						$("#left_arrow2").css({
+							"z-index" : "3"
+						});
+						$("#right_arrow").css({
+							"z-index" : "4"
+						});
+						$("#right_arrow2").css({
+							"z-index" : "3"
+						});
+					});
+					$("#right_arrow").click(function(){
+						$("#img1").css({
+							"width" : "500px",
+							"height" : "300px",
+							"left" : "-15%",
+							"opacity" : "0",
+							"z-index" : "1"
+						});
+						$("#img2").css({
+							"width" : "500px",
+							"height" : "300px",
+							"margin-left" : "-57.5%",
+							"opacity" : "0.25",
+							"z-index" : "1"
+						});
+						$("#img3").css({
+							"width" : "700px",
+							"height" : "400px",
+							"right" : "calc(50% - 350px)",
+							"opacity" : "1",
+							"z-index" : "2"
+						});
+						$("#left_arrow").css({
+							"z-index" : "3"
+						});
+						$("#left_arrow2").css({
+							"z-index" : "4"
+						});
+					});
+					$("#right_arrow2").click(function(){
+						$("#img1").css({
+							"width" : "500px",
+							"height" : "300px",
+							"left" : "7.5%",
+							"opacity" : "0.25",
+							"z-index" : "1"
+						});
+						$("#img2").css({
+							"width" : "700px",
+							"height" : "400px",
+							"margin-left" : "0",
+							"opacity" : "1",
+							"z-index" : "2"
+						});
+						$("#img3").css({
+							"width" : "500px",
+							"height" : "300px",
+							"right" : "7.5%",
+							"opacity" : "0.25",
+							"z-index" : "1"
+						});
+						$("#left_arrow").css({
+							"z-index" : "4"
+						});
+						$("#left_arrow2").css({
+							"z-index" : "3"
+						});
+						$("#right_arrow").css({
+							"z-index" : "4"
+						});
+						$("#right_arrow2").css({
+							"z-index" : "3"
+						});
+					});
 					$("#menu").click(function(){
 						if (bouton==0) {
 							$("#mb2").css({
@@ -129,18 +256,28 @@
 <h1 class="menubar" id="mb3">|</h1>
 </div>
 <div id="mtopbar">
-<a href="index.html" id="logo">LSQD</a>
-<a class="Tall" href="index.html"><h1 class="Tall" id="T2">Qui sommes-nous ?</h1></a>
-<a class="Tall" href="acteurs.html"><h1 class="Tall" id="T2">Nos acteurs</h1></a>
-<a class="Tall" href=".html"><h1 class="Tall" id="T2">Nous contacter</h1></a>
+<a href="index.html" id="logo"></a>
+<a class="Tall" href="index.html"><h1 class="Tall">Qui sommes-nous ?</h1></a>
+<a class="Tall" href="acteurs.html"><h1 class="Tall">Nos acteurs</h1></a>
+<a class="Tall" href=".html"><h1 class="Tall">Nous contacter</h1></a>
 </div>
 </div>
 <div id="div1">
-<div id="div2"><img id="rails" src="imgs/rails.jpg"></div>
+<div id="div2"><img id="rails" src="imgs/rails2.jpg"></div>
 <div id="div3">
 	<div id="caroussel">
-		
+		<h1 id="actus">Nos actus</h1>
+		<div id="img1"></div>
+		<h1 id="left_arrow"><</h1>
+		<h1 id="left_arrow2"><</h1>
+		<div id="img2"></div>
+		<h1 id="right_arrow">></h1>
+		<h1 id="right_arrow2">></h1>
+		<div id="img3"></div>
 	</div>
+</div>
+<div id="div4"><h1 id="T1">Qui sommes-nous ?</h1>
+<h1 id="T2">Notre équipe composée d'une vingtaine de membres cherche à réunir les acteurs oeuvrant pour la popularité de la ligne "Aubrac". Notre but final est de permettre la mise en relation de ces acteurs afin que les échanges soient moins méticuleux et qu'ils puissent toucher une plus grande audience.</h1>
 </div>
 </div>
 </body>
