@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Formulaire de contact</title>
+  <link rel="stylesheet" href="formulaire.css">
+</head>
+<body>
+  <h1>FORMULAIRE</h1>
+  <form action="traitement.php" method="post">
+    <label for="type_organisation">TTYPE D'ORGANISATION :</label>
+    <br>
+    <br>
+    <div class="radio-group">
+      <div class="radio-option">
+        <input type="radio" id="association" name="type_organisation" value="Association">
+        <label for="association">Association</label>
+      </div>
+      <div class="radio-option">
+        <input type="radio" id="entreprise" name="type_organisation" value="Entreprise">
+        <label for="entreprise">Entreprise</label>
+      </div>
+      <div class="radio-option">
+        <input type="radio" id="autre-radio" name="type_organisation" value="autre">
+<label for="autre-radio">Autre</label><br><br>
+<input type="text" id="autre-input" name="autre" pattern="[0-9]{14}" required><br>
+      </div>
+    </div>
+
+    <form action="traitement.php" method="post">
+      <label for="type_événement">TYPE D'EVENEMENT :</label>
+      <br>
+      <br>
+      <div class="radio-group">
+          <div class="column">
+              <div class="radio-option">
+                  <input type="radio" id="Voltige" name="type_événement" value="Voltige">
+                  <label for="Voltige">Voltige</label>
+              </div>
+              <div class="radio-option">
+                  <input type="radio" id="Théâtre" name="type_événement" value="Théâtre">
+                  <label for="Théâtre">Théâtre</label>
+              </div>
+              <div class="radio-option">
+                  <input type="radio" id="Performance1" name="type_événement" value="Performance">
+                  <label for="Performance1">Performance</label>
+              </div>
+              <div class="radio-option">
+                  <input type="radio" id="Cirque" name="type_événement" value="Cirque">
+                  <label for="Cirque">Cirque</label>
+              </div>
+          </div>
+          <div class="column">
+              <div class="radio-option">
+                  <input type="radio" id="Performance2" name="type_événement" value="Performance">
+                  <label for="Performance2">Performance</label>
+              </div>
+              <div class="radio-option">
+                  <input type="radio" id="Danse" name="type_événement" value="Danse">
+                  <label for="Danse">Danse</label>
+              </div>
+              <div class="radio-option">
+                  <input type="radio" id="Musique" name="type_événement" value="Musique">
+                  <label for="Musique">Musique</label>
+              </div>
+              <div class="radio-option">
+                  <input type="radio" id="Live et projections video" name="type_événement" value="Live et projections video">
+                  <label for="Live et projections video">Live et projections video</label>
+              </div>
+          </div>
+      </div>
+  </form>  
+  <br>
+    <label for="num_siret">Numéro de SIRET (14 chiffres) :</label>
+    <br>
+    <input type="text" id="num_siret" name="num_siret" pattern="[0-9]{14}" required><br>
+    <label for="num_siren">Numéro de SIREN (9 chiffres) :</label>
+    <br>
+    <input type="text" id="num_siren" name="num_siren" pattern="[0-9]{9}" required><br>
+    <label for="nom">Nom :</label>
+    <br>
+    <input type="text" id="nom" name="nom" required><br>
+    <label for="email">Email :</label>
+    <br>
+    <input type="email" id="email" name="email" required><br>
+    <br>
+    <input type="submit" value="Envoyer" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+    </form>
+    </body>
+    </html> 
