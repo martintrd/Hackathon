@@ -405,7 +405,13 @@ a{
 	height: 100px;
 	z-index: 1;
 }
-
+li{
+	text-align: right;
+	font-size: 18px;
+	width: 423px;
+	font-family: Montserrat;
+	color: white;
+}
 
 
 
