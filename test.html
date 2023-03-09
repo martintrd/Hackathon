@@ -343,7 +343,7 @@
 					<label for="Live et projections video" id="sous-catégories">Live et projections video</label>
 				</div>
 				<div class="radio-option">
-				  <input type="radio" name="autre" value="autre">
+				  <input type="radio" name="type_événement" value="autre">
 				  <label for="autre-radio" id="sous-catégories">Autre</label>
 				  <input type="text" id="autre" name="autre" pattern="[0-9]{14}" required><br>
 				</div>
@@ -392,7 +392,7 @@
 		echo "<ul>";
 		foreach ($commentaires as $commentaire) {
 			if (!empty($commentaire)) {
-				echo "<li>$commentaire</li>";
+				echo "<li id="comm">$commentaire</li>";
 			}
 		}
 		echo "</ul>";
