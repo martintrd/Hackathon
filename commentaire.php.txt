@@ -1,0 +1,37 @@
+<html>
+<head>
+    <link rel="stylesheet" href="css.css">
+	<title>Mon livre d'or</title>
+</head>
+<body>
+	<h1> Commentaire </h1>
+	
+		<!-- Formulaire pour ajouter un commentaire -->
+	<form method="post" action="index2.php">
+		<label for="nom">Nom :</label>
+		<input type="text" name="nom" required><br><br>
+
+		<label for="commentaire">Commentaire :</label>
+		<textarea name="commentaire" rows="4" cols="50" required></textarea><br><br>
+
+		<input type="submit" value="Envoyer">
+	</form>
+
+	<!-- Affichage des commentaires -->
+	<?php
+		// Récupération des commentaires depuis le fichier
+		$commentaires = file_get_contents("commentaires.txt");
+		$commentaires = explode("\n", $commentaires);
+
+		// Affichage des commentaires dans des balises HTML
+		echo "<ul>";
+		foreach ($commentaires as $commentaire) {
+			if (!empty($commentaire)) {
+				echo "<li>$commentaire</li>";
+			}
+		}
+		echo "</ul>";
+	?>
+
+</body>
+</html>
