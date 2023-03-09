@@ -392,7 +392,7 @@
 		echo "<ul>";
 		foreach ($commentaires as $commentaire) {
 			if (!empty($commentaire)) {
-				echo "<li id="comm">$commentaire</li>";
+				echo "<li>$commentaire</li>";
 			}
 		}
 		echo "</ul>";
