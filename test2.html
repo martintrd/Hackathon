@@ -1,103 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Carrousel d'images</title>
-	<style>
-		#slider {
-			position: relative;
-			overflow: hidden;
-			margin: 20px auto;
-			width: 80%;
-			height: 400px;
-			background-color: #eee;
-		}
+<h2>Les Amis du Garabit (Amiga)</h2>
 
-		#slider img {
-			position: absolute;
-			top: 0;
-			left: 0;
-			height: 100%;
-			width: 100%;
-			object-fit: cover;
-		}
+<p>une association qui a pour objectif de protéger et de promouvoir le viaduc de Garabit, une structure métallique emblématique située dans le département du Cantal en France.</p>
 
-		#slider-controls {
-			text-align: center;
-			margin-top: 10px;
-		}
+<h2>Le Comité pluraliste</h2>
 
-		#slider-controls button {
-			background-color: #ddd;
-			border: none;
-			padding: 10px;
-			margin-right: 5px;
-			cursor: pointer;
-		}
+<p>une association politique française qui se concentre sur la défense de la démocratie et des droits de l'Homme. L'association est ouverte à toutes les personnes qui partagent ces valeurs et qui souhaitent s'impliquer dans la vie politique de leur pays.</p>
 
-		#slider-controls button.active {
-			background-color: #666;
-			color: #fff;
-		}
-	</style>
-</head>
-<body>
+<h2> Communautés de communes Grand Orb <h2>
 
-<div id="slider">
-	<img src="https://picsum.photos/id/1018/1200/800">
-	<img src="https://picsum.photos/id/1025/1200/800">
-	<img src="https://picsum.photos/id/1039/1200/800">
-	<img src="https://picsum.photos/id/104/1200/800">
-</div>
+<p>entités administratives françaises qui regroupent plusieurs communes voisines. Leur objectif est de coordonner les actions et les projets des communes membres dans différents domaines tels que le développement économique, l'aménagement du territoire, l'environnement, les services à la population, etc.</p>
 
-<div id="slider-controls">
-	<button class="slider-btn active"></button>
-	<button class="slider-btn"></button>
-	<button class="slider-btn"></button>
-	<button class="slider-btn"></button>
-</div>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-$(document).ready(function() {
-	// Initialisation des variables
-	var slider = $("#slider");
-	var slides = slider.find("img");
-	var slideCount = slides.length;
-	var currentIndex = 0;
-	
-	// Fonction pour changer de slide
-	function moveSlide(index) {
-		// Vérification des bornes
-		if (index < 0) {
-			index = slideCount - 1;
-		} else if (index >= slideCount) {
-			index = 0;
-		}
-		// Animation
-		slides.eq(currentIndex).fadeOut();
-		slides.eq(index).fadeIn();
-		// Mise à jour de l'index courant
-		currentIndex = index;
-		// Mise à jour du bouton actif
-		$(".slider-btn").removeClass("active");
-		$(".slider-btn").eq(currentIndex).addClass("active");
-	}
-	
-	// Initialisation du premier slide
-	slides.eq(currentIndex).fadeIn();
-	
-	// Ajout des événements sur les boutons
-	$(".slider-btn").on("click", function() {
-		var index = $(this).index();
-		moveSlide(index);
-	});
-	
-	// Défilement automatique
-	setInterval(function() {
-		moveSlide(currentIndex + 1);
-	}, 5000);
-});
-</script>
-
-</body>
-</html>
+<h2>...</h2>
