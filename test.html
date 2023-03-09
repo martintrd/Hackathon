@@ -263,7 +263,7 @@
 </div>
 </div>
 <div id="div1">
-<div id="div2"><img id="rails" src="imgs/rails2.jpg"></div>
+<div id="div2"><img id="rails" src="imgs/rails2.jpg"><h1 id="Tmain">AUBRAC EXPRESS</h1></div>
 <div id="div3">
 	<div id="caroussel">
 		<h1 id="actus">Nos actualités</h1>
@@ -281,6 +281,125 @@
 	<h1 id="T2">Notre équipe composée d'une vingtaine de membres cherche à réunir les acteurs oeuvrant pour le maintien de la ligne ferroviaire "Aubrac". Notre but final est de permettre la mise en relation de ces acteurs afin que les échanges soient moins méticuleux et qu'ils puissent toucher une plus grande audience.</h1>
 </div>
 <div id="footer">
+	<h1 id="form">FORMULAIRE DE CONTACT</h1>
+	<form action="traitement.php" method="post">
+	  <label for="type_organisation" id="catégories">TYPE D'ORGANISATION :</label>
+	  <br>
+	  <br>
+	  <div class="radio-group">
+		<div class="radio-option">
+		  <input type="radio" id="association" name="type_organisation" value="Association">
+		  <label for="association" id="sous-catégories">Association</label>
+		</div>
+		<div class="radio-option">
+		  <input type="radio" id="entreprise" name="type_organisation" value="Entreprise">
+		  <label for="entreprise" id="sous-catégories">Entreprise</label>
+		</div>
+		<div class="radio-option">
+		  <input type="radio" id="autre-radio" name="type_organisation" value="autre">
+		  <label for="autre-radio" id="sous-catégories">Autre</label><br><br>
+		  <input type="text" id="autre-input" name="autre" pattern="[0-9]{14}" required><br>
+		</div>
+	  </div>
+  
+	  <form action="traitement.php" method="post">
+		<label for="type_événement" id="catégories">TYPE D'EVENEMENT :</label>
+		<br>
+		<br>
+		<div class="radio-group">
+			<div class="column">
+				<div class="radio-option">
+					<input type="radio" id="Voltige" name="type_événement" value="Voltige">
+					<label for="Voltige" id="sous-catégories">Voltige</label>
+				</div>
+				<div class="radio-option">
+					<input type="radio" id="Théâtre" name="type_événement" value="Théâtre">
+					<label for="Théâtre" id="sous-catégories">Théâtre</label>
+				</div>
+				<div class="radio-option">
+					<input type="radio" id="Performance1" name="type_événement" value="Performance">
+					<label for="Performance1" id="sous-catégories">Performance</label>
+				</div>
+				<div class="radio-option">
+					<input type="radio" id="Cirque" name="type_événement" value="Cirque">
+					<label for="Cirque" id="sous-catégories">Cirque</label>
+				</div>
+			</div>
+			<div class="column">
+				<div class="radio-option">
+					<input type="radio" name="type_événement" value="Performance">
+					<label for="Performance2" id="sous-catégories">Performance</label>
+				</div>
+				<div class="radio-option">
+					<input type="radio" name="type_événement" value="Danse">
+					<label for="Danse" id="sous-catégories">Danse</label>
+				</div>
+				<div class="radio-option">
+					<input type="radio" name="type_événement" value="Musique">
+					<label for="Musique" id="sous-catégories">Musique</label>
+				</div>
+				<div class="radio-option">
+					<input type="radio" name="type_événement" value="Live et projections video">
+					<label for="Live et projections video" id="sous-catégories">Live et projections video</label>
+				</div>
+				<div class="radio-option">
+				  <input type="radio" name="autre" value="autre">
+				  <label for="autre-radio" id="sous-catégories">Autre</label>
+				  <input type="text" id="autre" name="autre" pattern="[0-9]{14}" required><br>
+				</div>
+			</div>
+		</div>
+	</form>  
+	<br>
+	  <label for="num_siret" id="catégories">Numéro de SIRET (14 chiffres) :</label>
+	  <br>
+	  <input type="text" class="cases" id="num_siret" name="num_siret" pattern="[0-9]{14}" required><br>
+	  <label for="num_siren" id="catégories">Numéro de SIREN (9 chiffres) :</label>
+	  <br>
+	  <input type="text" class="cases" id="num_siren" name="num_siren" pattern="[0-9]{9}" required><br>
+	  <label for="nom" id="catégories">Nom :</label>
+	  <br>
+	  <input type="text" class="cases" id="nom" name="nom" required><br>
+	  <label for="email" id="catégories">Email :</label>
+	  <br>
+	  <input type="email" class="cases" id="email" name="email" required><br>
+	  <br>
+	  <input type="submit" id="envoyer" class="cases" value="Envoyer" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;" id="catégories">
+	  </form>
+	<div id="commentaire">
+	<h1 id="corm"> COMMENTAIRES </h1>
+	
+	<!-- Formulaire pour ajouter un commentaire -->
+	<form method="post" action="index2.php" id="form2">
+		<label for="nom" id="catégories">Nom :</label>
+		<input type="text" name="nom" required><br><br>
+
+		<label for="commentaire" id="catégories">Commentaire :</label>
+		<textarea name="commentaire" rows="4" cols="50" required></textarea><br><br>
+
+		<input type="submit" id="envoyer" class="cases" value="Envoyer" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;" id="catégories">
+	</form>
+	<br>
+	
+
+	<!-- Affichage des commentaires -->
+	<?php
+		// Récupération des commentaires depuis le fichier
+		$commentaires = file_get_contents("commentaires.txt");
+		$commentaires = explode("\n", $commentaires);
+
+		// Affichage des commentaires dans des balises HTML
+		echo "<ul>";
+		foreach ($commentaires as $commentaire) {
+			if (!empty($commentaire)) {
+				echo "<li>$commentaire</li>";
+			}
+		}
+		echo "</ul>";
+	?>
+	</div>
+	<div id="séparation"></div>
+	<div id="carré"></div>
 </div>
 
 </div>
